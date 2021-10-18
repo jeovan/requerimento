@@ -14,6 +14,7 @@
     <%== subtitulo('TIPO DE SERVIÇO')%>
 
 
+
     <div class="col-md-12">
       <%= f.input '',
           legend_tag: false,
@@ -30,7 +31,50 @@
 
     <%== subtitulo('IDENTIFICAÇÃO DO CONTRIBUINTE')%>
 
+    <%= f.input :cnpj, wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Nome/Razão Social', wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Nome fantasia', wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Utilização do estabelecimento', 
+        as: :select,
+        collection: lista_estabelecimentos,
+        wrapper_html:{ class: 'col-md-6'} 
+    %>
+
+
     <%== subtitulo('ENDEREÇO COMERCIAL DO CONTRIBUINTE')%>
+
+
+    <%== input_pesquisa(
+      label: 'LOGRADOURO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+    <%= f.input :complemento, wrapper_html:{ class: 'col-md-4'} %>
+    <%= f.input :numero, wrapper_html:{ class: 'col-md-2'} %>
+
+    <%== input_pesquisa(
+      label: 'BAIRRO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+    <%== input_pesquisa(
+      label: 'DISTRITO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+    <%== input_pesquisa(
+      label: 'MUNICIPIO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+
+    
+
+  
     
     <%== subtitulo('ENDEREÇO DE CORRESPONDÊNCIA')%>
 
