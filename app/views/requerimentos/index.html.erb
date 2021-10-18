@@ -1,0 +1,40 @@
+<% content_for :titulo do%>
+<h5 class="panel-title col-md-12 titulo">
+  <i class="icon-stack"></i>
+  <strong>
+    REQUERIMENTO DE INSCRIÇÃO DE SUBSTITUTO TRIBUTÁRIO
+  </strong>
+</h5>
+<%end%>
+
+
+<%= simple_form_for :requerimento do |f|%>
+  <div class="row">
+
+    <%== subtitulo('TIPO DE SERVIÇO')%>
+
+
+    <div class="col-md-12">
+      <%= f.input '',
+          legend_tag: false,
+          label: false, 
+          as: :radio_buttons,
+          collection: [
+            ['Inscrição Substituto Tributário ou Gráfica de Outro Estado',1],
+            ['Inscrição Canteiro Obras',2],
+            ['Inscrição Estadual de Empresa não Registrada na Jucer',3]
+          ]
+      %>
+    </div>
+
+
+    <%== subtitulo('IDENTIFICAÇÃO DO CONTRIBUINTE')%>
+
+    <%== subtitulo('ENDEREÇO COMERCIAL DO CONTRIBUINTE')%>
+    
+    <%== subtitulo('ENDEREÇO DE CORRESPONDÊNCIA')%>
+
+
+  </div>
+
+<% end %>
