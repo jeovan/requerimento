@@ -11,23 +11,7 @@
 <%= simple_form_for :requerimento do |f|%>
   <div class="row">
 
-    <%== subtitulo('TIPO DE SERVIÇO')%>
-
-
-
-    <div class="col-md-12">
-      <%= f.input '',
-          legend_tag: false,
-          label: false, 
-          as: :radio_buttons,
-          collection: [
-            ['Inscrição Substituto Tributário ou Gráfica de Outro Estado',1],
-            ['Inscrição Canteiro Obras',2],
-            ['Inscrição Estadual de Empresa não Registrada na Jucer',3]
-          ]
-      %>
-    </div>
-
+    <%= render 'requerimentos/form/tipo_servico', f: f%>
 
     <%== subtitulo('IDENTIFICAÇÃO DO CONTRIBUINTE')%>
 
@@ -64,14 +48,14 @@
       input: f.input(nil, label: false),
       size: 6,
     )%>
-
+    <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
     <%== input_pesquisa(
       label: 'MUNICIPIO',
       size: 6,
       input: f.input(nil, label: false),
     )%>
 
-    <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
+    
     <%= f.input :cep, wrapper_html:{ class: 'col-md-4'}%>
     
     <%= f.input 'Alvará', wrapper_html:{ class: 'col-md-6'} %>
@@ -89,19 +73,121 @@
         <%= f.input :logradouro, wrapper_html:{ class: 'col-md-12'}%>
         <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
         <%= f.input :distrito, wrapper_html:{ class: 'col-md-6'}%>
-
+        <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
         <%== input_pesquisa(
           label: 'MUNICIPIO',
           size: 6,
           input: f.input(nil, label: false),
         )%>
 
-        <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
+        
         <%= f.input :cep, wrapper_html:{ class: 'col-md-4'}%>
 
 
         <%= f.input :telefone, wrapper_html:{ class: 'col-md-6'}%>
         <%= f.input :email, wrapper_html:{ class: 'col-md-6' }%>
+      
+      <%== subtitulo('QUALIFICAÇÃO DO CONTRIBUINTE')%>
+
+      <%== input_pesquisa(
+          label: 'Natureza Jurídica',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%== input_pesquisa(
+          label: 'Regime de Pagamento',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%== input_pesquisa(
+          label: 'Atividade Econômica Principal',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+
+      <%== subtitulo('IDENTIFICAÇÃO DO CONTABILISTA')%>
+
+      <%== input_pesquisa(
+          label: 'Identificação',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%= f.input :crc, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input 'Razão Social', wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
+
+      <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :distrito, wrapper_html:{ class: 'col-md-6'}%>
+
+      <%= f.input :uf, readonly: true, wrapper_html:{ class: 'col-md-2'}%>
+      <%== input_pesquisa(
+          label: 'Municipio',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      
+      <%= f.input :cep, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input :telefone_1, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input :telefone_2, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input :email, wrapper_html:{ class: 'col-md-4'}%>
+
+
+      <%== subtitulo('QUADRO SOCIETÁRIO')%>
+
+      <div class="col-md-12">
+          <%= f.input 'Sócio Responsável?', 
+              as: :boolean
+          %>
+      </div>
+
+      <%== input_pesquisa(
+          label: 'Identificação',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%= f.input 'Nome/Razão Social', wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :rg, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input 'Orgão Expedidor', wrapper_html:{ class: 'col-md-2'}%>
+
+      <%== input_pesquisa(
+          label: 'Cargo',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :distrito, wrapper_html:{ class: 'col-md-4'}%>
+
+      <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}%>
+
+      <%== input_pesquisa(
+          label: 'Municipio',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+
+      <%= f.input :cep, wrapper_html:{ class: 'col-md-2'}%>
+      <%= f.input :telefone_1, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :telefone_2, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :email, wrapper_html:{ class: 'col-md-4'}%>
+
+
+      <%== subtitulo('CADASTRO DE SOCIOS')%>
+
+
+
+
+
+
+
 
   </div>
 
