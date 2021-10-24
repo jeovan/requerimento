@@ -1,0 +1,44 @@
+      <%== subtitulo('QUADRO SOCIETÁRIO')%>
+
+      <div class="col-md-12">
+          <%= f.input 'Sócio Responsável?', 
+              as: :boolean
+          %>
+      </div>
+
+      <%== input_pesquisa(
+          label: 'Identificação',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%= f.input 'Nome/Razão Social', wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :rg, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input 'Orgão Expedidor', wrapper_html:{ class: 'col-md-2'}%>
+
+      <%== input_pesquisa(
+          label: 'Cargo',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+      <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :distrito, wrapper_html:{ class: 'col-md-4'}%>
+
+      <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}%>
+
+      <%== input_pesquisa(
+          label: 'Municipio',
+          size: 6,
+          input: f.input(nil, label: false),
+      )%>
+
+
+      <%= f.input :cep, wrapper_html:{ class: 'col-md-2'}%>
+      <%= f.input :telefone_1, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :telefone_2, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :email, wrapper_html:{ class: 'col-md-4'}%>
+
+
+      <%== subtitulo('CADASTRO DE SOCIOS')%>

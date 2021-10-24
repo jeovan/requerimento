@@ -1,0 +1,35 @@
+    <%== subtitulo('ENDEREÇO COMERCIAL DO CONTRIBUINTE')%>
+
+
+    <%== input_pesquisa(
+      label: 'LOGRADOURO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+    <%= f.input :complemento, wrapper_html:{ class: 'col-md-4'} %>
+    <%= f.input :numero, wrapper_html:{ class: 'col-md-2'} %>
+
+    <%== input_pesquisa(
+      label: 'BAIRRO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+
+    <%== input_pesquisa(
+      label: 'DISTRITO',
+      input: f.input(nil, label: false),
+      size: 6,
+    )%>
+    <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
+    <%== input_pesquisa(
+      label: 'MUNICIPIO',
+      size: 6,
+      input: f.input(nil, label: false),
+    )%>
+
+    
+    <%= f.input :cep, wrapper_html:{ class: 'col-md-4'}%>
+    
+    <%= f.input 'Alvará', wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Área Utilizada', wrapper_html:{ class: 'col-md-2'}%>
