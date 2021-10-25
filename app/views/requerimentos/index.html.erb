@@ -10,14 +10,28 @@
 
 <%= simple_form_for :requerimento do |f|%>
   <div class="row">
+    <div class="tabbable col-md-12 tb-formulario">
+      <ul class="nav nav-tabs nav-tabs-solid nav-justified nav-tabs-top ">
+          <li class="active"> <a  href="#tab_servico" data-toggle="tab">TIPO DE SERVIÇO</a></li>
+          <li >               <a  href="#tab_identificacao_contr" data-toggle="tab">IDENTIFICAÇÃO DO CONTRIBUINTE</a></li>
+          <li >               <a  href="#tab_ender_comercial" data-toggle="tab">ENDEREÇO COMERCIAL DO CONTRIBUINTE</a></li>
+          <li >               <a  href="#tab_ender_correspondencia" data-toggle="tab">ENDEREÇO DE CORRESPONDÊNCIA</a></li>
+          <li >               <a  href="#tab_qualificacao" data-toggle="tab">QUALIFICAÇÃO DO CONTRIBUINTE</a></li>
+          <li >               <a  href="#tab_identificacao_contab" data-toggle="tab">IDENTIFICAÇÃO DO CONTABILISTA</a></li>
+          <li >               <a  href="#tab_societario" data-toggle="tab">QUADRO SOCIETÁRIO</a></li>
+      </ul>
 
-    <%= render 'requerimentos/form/tipo_servico', f: f%>
-    <%= render 'requerimentos/form/identificacao_contribuinte', f: f%>
-    <%= render 'requerimentos/form/endereco_comercial', f: f%>
-    <%= render 'requerimentos/form/endereco_correspondencia', f: f%>
-    <%= render 'requerimentos/form/qualificacao_contribuinte', f: f%>
-    <%= render 'requerimentos/form/identificacao_contabilista', f: f%>
-    <%= render 'requerimentos/form/quadro_societario', f: f%>
+      <div class="tab-content">
+        <div class="tab-pane has-padding active" id="tab_servico"> <%= render 'requerimentos/form/tipo_servico',               f: f%></div>
+        <div class="tab-pane has-padding" id="tab_identificacao_contr"> <%= render 'requerimentos/form/identificacao_contribuinte', f: f%></div>
+        <div class="tab-pane has-padding" id="tab_ender_comercial"> <%= render 'requerimentos/form/endereco_comercial',         f: f%></div>
+        <div class="tab-pane has-padding" id="tab_ender_correspondencia"> <%= render 'requerimentos/form/endereco_correspondencia',   f: f%></div>
+        <div class="tab-pane has-padding" id="tab_qualificacao"> <%= render 'requerimentos/form/qualificacao_contribuinte',  f: f%></div>
+        <div class="tab-pane has-padding" id="tab_identificacao_contab"> <%= render 'requerimentos/form/identificacao_contabilista', f: f%></div>
+        <div class="tab-pane has-padding" id="tab_societario"> <%= render 'requerimentos/form/quadro_societario',          f: f%></div>
+      </div>
+
+    </div>
 
   </div>
 

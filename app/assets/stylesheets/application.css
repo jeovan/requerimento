@@ -49,3 +49,24 @@
 .decorated > span:after{
  left: 100%;
 }
+
+li.active>a:after{
+  background-color: #286fa5 !important;
+}
+
+li.active>a{
+  border-left-color: #286fa5 !important;
+}
+
+@media (min-width: 769px){
+  .tb-formulario>ul{
+    display: flex;flex-wrap: wrap;
+  }
+  
+  .tb-formulario>ul>li{
+    display: inline-block;flex: 1; 
+  }
+  .tb-formulario>ul>li>a{
+    height: 100% 
+  }
+}
