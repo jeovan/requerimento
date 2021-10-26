@@ -3,8 +3,10 @@
 
     <%== input_pesquisa(
       label: 'LOGRADOURO',
-      input: f.input(nil, label: false),
+      input: f.input(:logradouro, label: false, ),
       size: 6,
+      id_modal: '#modal_logradouro',
+      url: logradouros_path,
     )%>
 
     <%= f.input :complemento, wrapper_html:{ class: 'col-md-4'} %>
@@ -12,20 +14,21 @@
 
     <%== input_pesquisa(
       label: 'BAIRRO',
-      input: f.input(nil, label: false),
+      input: f.input(:bairro, label: false),
       size: 6,
+      
     )%>
 
     <%== input_pesquisa(
       label: 'DISTRITO',
-      input: f.input(nil, label: false),
+      input: f.input(:distrito, label: false),
       size: 6,
     )%>
     <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
     <%== input_pesquisa(
       label: 'MUNICIPIO',
       size: 6,
-      input: f.input(nil, label: false),
+      input: f.input(:municipio, label: false),
     )%>
 
     

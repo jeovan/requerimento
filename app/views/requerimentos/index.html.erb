@@ -8,7 +8,7 @@
 <%end%>
 
 
-<%= simple_form_for :requerimento do |f|%>
+<%= simple_form_for :requerimento, :url => 'logradouro' do |f|%>
   <div class="row">
     <div class="tabbable col-md-12 tb-formulario">
       <ul class="nav nav-tabs nav-tabs-solid nav-justified nav-tabs-top ">
@@ -22,17 +22,19 @@
       </ul>
 
       <div class="tab-content">
-        <div class="tab-pane has-padding active" id="tab_servico"> <%= render 'requerimentos/form/tipo_servico',               f: f%></div>
-        <div class="tab-pane has-padding" id="tab_identificacao_contr"> <%= render 'requerimentos/form/identificacao_contribuinte', f: f%></div>
-        <div class="tab-pane has-padding" id="tab_ender_comercial"> <%= render 'requerimentos/form/endereco_comercial',         f: f%></div>
+        <div class="tab-pane has-padding active" id="tab_servico">        <%= render 'requerimentos/form/tipo_servico',               f: f%></div>
+        <div class="tab-pane has-padding" id="tab_identificacao_contr">   <%= render 'requerimentos/form/identificacao_contribuinte', f: f%></div>
+        <div class="tab-pane has-padding" id="tab_ender_comercial">       <%= render 'requerimentos/form/endereco_comercial',         f: f%></div>
         <div class="tab-pane has-padding" id="tab_ender_correspondencia"> <%= render 'requerimentos/form/endereco_correspondencia',   f: f%></div>
-        <div class="tab-pane has-padding" id="tab_qualificacao"> <%= render 'requerimentos/form/qualificacao_contribuinte',  f: f%></div>
-        <div class="tab-pane has-padding" id="tab_identificacao_contab"> <%= render 'requerimentos/form/identificacao_contabilista', f: f%></div>
-        <div class="tab-pane has-padding" id="tab_societario"> <%= render 'requerimentos/form/quadro_societario',          f: f%></div>
+        <div class="tab-pane has-padding" id="tab_qualificacao">          <%= render 'requerimentos/form/qualificacao_contribuinte',  f: f%></div>
+        <div class="tab-pane has-padding" id="tab_identificacao_contab">  <%= render 'requerimentos/form/identificacao_contabilista', f: f%></div>
+        <div class="tab-pane has-padding" id="tab_societario">            <%= render 'requerimentos/form/quadro_societario',          f: f%></div>
       </div>
 
     </div>
 
   </div>
-
+  <%= f.submit%>
 <% end %>
+
+<%= render 'requerimentos/form/modal_logradouro'%>

@@ -23,18 +23,21 @@ module RequerimentosHelper
   end
 
 
-  def input_pesquisa input:, size:, label:
+  def input_pesquisa input:, size:, label:, id_modal: '',url: nil
     %Q{
       <div class="col-md-#{size}">
         <div class="form-group">
             <label class="control-label">#{label}</label>
             <span class="text-danger">*</span></label>
             <div>
+                <div style="display:none">#{input}</div>
                 <div class="input-group">
-                #{input}
+                <div class="form-group">
+                  <input class="form-control string required" type="text" name="pesquisa" >
+                </div>
                 <span class="input-group-btn text-primary" style="cursor:pointer">
                     <span class="input-group-btn">
-                    <button style="background-color:#286fa5" class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_contribuinte">buscar</button>
+                    <a href="#{url|| '#'}" data-remote="true" style="background-color:#286fa5" class="btn btn-primary input-pesquisa" type="button" data-toggle="modal" data-target="#{id_modal}" >buscar</a>
                     </span>
                 </span>
                 </div>
