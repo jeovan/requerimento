@@ -23,7 +23,7 @@ module RequerimentosHelper
   end
 
 
-  def input_pesquisa input:, size:, label:
+  def input_pesquisa input:, size:, label:, url: nil
     %Q{
       <div class="col-md-#{size}">
         <div class="form-group">
@@ -34,7 +34,7 @@ module RequerimentosHelper
                 #{input}
                 <span class="input-group-btn text-primary" style="cursor:pointer">
                     <span class="input-group-btn">
-                    <button style="background-color:#286fa5" class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal_contribuinte">buscar</button>
+                    <a href="#{url}" data-remote="true" style="background-color:#286fa5" class="btn btn-primary">buscar</a>
                     </span>
                 </span>
                 </div>
