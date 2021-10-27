@@ -1,0 +1,10 @@
+    <%== subtitulo('IDENTIFICAÇÃO DO CONTRIBUINTE')%>
+
+    <%= f.input :cnpj, wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Nome/Razão Social', wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Nome fantasia', wrapper_html:{ class: 'col-md-6'} %>
+    <%= f.input 'Utilização do estabelecimento', 
+        as: :select,
+        collection: lista_estabelecimentos,
+        wrapper_html:{ class: 'col-md-6'} 
+    %>

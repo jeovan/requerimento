@@ -49,3 +49,31 @@
 .decorated > span:after{
  left: 100%;
 }
+
+
+
+li.active > a:after{
+  background-color: #286fa5 !important;
+}
+li.active > a{
+  background-color: #286fa5 !important;
+  border-left-color: #286fa5 !important;
+  color: white !important
+}
+
+@media (min-width: 769px){
+  .tab-formulario>ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tab-formulario >ul >li{
+    display: inline-block;flex:1;
+  }
+  .tab-formulario > ul >li >a {
+    height: 100%;
+  }
+}
+
+
+
