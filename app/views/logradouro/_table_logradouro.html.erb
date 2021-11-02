@@ -14,9 +14,14 @@
             <td><%= logradouro.it_no_logradouro%></td>
             <td><%= logradouro.it_co_logradouro%></td>
             <td class="text-center">
-              <a href="#" style="padding:10px 10px" class="btn btn-success btn-raised legitRipple">
+              <button 
+                href="#" 
+                style="padding:10px 10px"
+                data-input="<%= @input_id%>" 
+                data-valor="<%= logradouro.it_co_tipo_logradouro%> - <%= logradouro.it_no_logradouro%>" 
+                class="btn btn-success btn-raised legitRipple btn-logradouro">
                 <i class=" icon-add"></i>
-            </a>
+            </button>
             </td>
           </tr>
         <%end%>
