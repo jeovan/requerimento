@@ -21,26 +21,11 @@
 
                     </div>
                 </form>
-                <table class="table table-bordered table-hover table-xxs col-md-12" id="tb_pesq_usuarios">
-                    <thead>
-                        <tr>
-                            <th>TIPO</th>
-                            <th>DESCRIÇÃO</th>
-                            <th>CÓDIGO</th>
-                            <th class="text-center"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @logradouros.each do |logradouro| %>
-                          <tr>
-                            <td><%= logradouro.it_co_tipo_logradouro%></td>
-                            <td><%= logradouro.it_no_logradouro%></td>
-                            <td><%= logradouro.it_co_logradouro%></td>
-                          </tr>
-                        
-                        <%end%>
-                    </tbody>
-                </table>
+            
+            <div id="table_logradouro">
+            
+            </div>
+                
 
             </div>
 

@@ -1,0 +1,24 @@
+<table class="table table-bordered table-hover table-xxs col-md-12" id="tb_pesq_usuarios">
+    <thead>
+        <tr>
+            <th>TIPO</th>
+            <th>DESCRIÇÃO</th>
+            <th>CÓDIGO</th>
+            <th class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @logradouros.each do |logradouro| %>
+          <tr>
+            <td><%= logradouro.it_co_tipo_logradouro%></td>
+            <td><%= logradouro.it_no_logradouro%></td>
+            <td><%= logradouro.it_co_logradouro%></td>
+            <td class="text-center">
+              <a href="#" style="padding:10px 10px" class="btn btn-success btn-raised legitRipple">
+                <i class=" icon-add"></i>
+            </a>
+            </td>
+          </tr>
+        <%end%>
+    </tbody>
+</table>
