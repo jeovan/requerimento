@@ -1,0 +1,3 @@
+$('#table_municipios').html(' <%= escape_javascript(render "municipios/table_municipios") %> ')
+$('#modal_municipio').find('input[name="data-input"]').val('<%= @input_id%>')
+$('#modal_municipio').modal('show');

@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
 
   def input_id
     @input_id = params['data-input']
+
+    
   end
 end

@@ -19,6 +19,9 @@
    color: blue
  } */
 
+ .invalid-feedback{
+   color: red;
+ }
  .titulo{
   padding: 0 0 0 10px;
 

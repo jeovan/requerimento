@@ -1,4 +1,6 @@
 $('#table_logradouro').html(' <%= escape_javascript(render "logradouro/table_logradouro") %> ')
 
+$('#modal_logradouro').find('input[name="data-input"]').val('<%= @input_id%>')
 $('#modal_logradouro').modal('show');
+
 
