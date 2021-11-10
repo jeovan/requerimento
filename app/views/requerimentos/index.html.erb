@@ -57,4 +57,9 @@
 
 <% end %>
 
-<div id="bloco_modal"></div>
+<div id="bloco_modal">
+  <%= render 'requerimentos/modal', :tipo => 'logradouro' %>
+  <%= render 'requerimentos/modal', :tipo => 'municipio' %>
+  <%= render 'requerimentos/modal', :tipo => 'bairro' %>
+
+</div>

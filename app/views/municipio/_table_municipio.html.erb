@@ -1,0 +1,34 @@
+ <table class="table table-bordered table-hover table-xxs col-md-12" id="tb_pesq_usuarios">
+    <thead>
+        <tr>
+            <th>CÓDIGO</th>
+            <th>DESCRIÇÃO</th>
+            <th>UF</th>
+            <th class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @municipios.each do |municipio| %>
+          <tr>
+            <td><%= municipio.it_co_municipio%></td>
+            <td><%= municipio.it_no_municipio%></td>
+            <td><%= municipio.it_sg_uf_municipio%></td>
+            <td class="text-center">
+              <button href="#" 
+                  style="padding:10px 10px"
+                  data-input="<%= @input_id%>" 
+                  data-valor="<%= municipio.it_no_municipio%> - <%= municipio.it_sg_uf_municipio%>" 
+                  class="btn btn-success btn-raised legitRipple btn-municipio">
+                  <i class=" icon-add"></i> 
+              </button>
+            </td>
+          </tr>
+        
+        <%end%>
+    </tbody>
+</table>
+
+
+<div class="row" style="margin-top: 20px" id="bloco_registros">
+    <div class='text-center'><%== pagy_bootstrap_nav(@pagy) %></div>
+</div>

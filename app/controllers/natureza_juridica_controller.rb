@@ -1,0 +1,2 @@
+class NaturezaJuridicaController < ApplicationController
+end

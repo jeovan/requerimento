@@ -1,0 +1,2 @@
+class RegimePagamentoController < ApplicationController
+end

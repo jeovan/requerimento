@@ -13,11 +13,11 @@
       <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
       <%= f.input :distrito, wrapper_html:{ class: 'col-md-6'}%>
 
-      <%= f.input :uf, readonly: true, wrapper_html:{ class: 'col-md-2'}%>
       <%== input_pesquisa(
           label: 'Municipio',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:municipio_contabilista, label: false),
+          url: municipio_index_path
       )%>
 
       

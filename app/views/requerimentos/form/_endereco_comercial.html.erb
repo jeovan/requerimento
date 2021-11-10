@@ -3,30 +3,27 @@
 
     <%== input_pesquisa(
       label: 'LOGRADOURO',
-      input: f.input(nil, label: false),
+      input: f.input(:logradouro_comercial, label: false),
       size: 6,
       url: logradouro_index_path
     )%>
+
 
     <%= f.input :complemento, wrapper_html:{ class: 'col-md-4'} %>
     <%= f.input :numero, wrapper_html:{ class: 'col-md-2'} %>
 
     <%== input_pesquisa(
       label: 'BAIRRO',
-      input: f.input(nil, label: false),
+      input: f.input(:bairro_comercial, label: false),
       size: 6,
+      url: bairro_index_path
     )%>
 
     <%== input_pesquisa(
-      label: 'DISTRITO',
-      input: f.input(nil, label: false),
-      size: 6,
-    )%>
-    <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}, :readonly => true  %>
-    <%== input_pesquisa(
       label: 'MUNICIPIO',
       size: 6,
-      input: f.input(nil, label: false),
+      input: f.input(:municipio_comercial, label: false),
+      url: municipio_index_path
     )%>
 
     

@@ -1,0 +1,34 @@
+ <table class="table table-bordered table-hover table-xxs col-md-12" id="tb_pesq_usuarios">
+    <thead>
+        <tr>
+            <th>TIPO</th>
+            <th>DESCRIÇÃO</th>
+            <th>CÓDIGO</th>
+            <th class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @logradouros.each do |logradouro| %>
+          <tr>
+            <td><%= logradouro.it_co_tipo_logradouro%></td>
+            <td><%= logradouro.it_no_logradouro%></td>
+            <td><%= logradouro.it_co_logradouro%></td>
+            <td class="text-center">
+              <button href="#" 
+                  style="padding:10px 10px"
+                  data-input="<%= @input_id%>" 
+                  data-valor="<%= logradouro.it_no_logradouro%>" 
+                  class="btn btn-success btn-raised legitRipple btn-logradouro">
+                  <i class=" icon-add"></i> 
+              </button>
+            </td>
+          </tr>
+        
+        <%end%>
+    </tbody>
+</table>
+
+
+<div class="row" style="margin-top: 20px" id="bloco_registros">
+    <div class='text-center'><%== pagy_bootstrap_nav(@pagy) %></div>
+</div>

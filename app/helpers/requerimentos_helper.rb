@@ -24,6 +24,9 @@ module RequerimentosHelper
 
 
   def input_pesquisa input:, size:, label:, url: nil
+
+    id_input = Nokogiri::HTML(input).at('input').attr('id')
+
     %Q{
       <div class="col-md-#{size}">
         <div class="form-group">
@@ -34,7 +37,7 @@ module RequerimentosHelper
                 #{input}
                 <span class="input-group-btn text-primary" style="cursor:pointer">
                     <span class="input-group-btn">
-                    <a href="#{url}" data-remote="true" style="background-color:#286fa5" class="btn btn-primary">buscar</a>
+                    <a href="#{url}?data-input=#{id_input}" data-remote="true" style="background-color:#286fa5" class="btn btn-primary">buscar</a>
                     </span>
                 </span>
                 </div>
