@@ -3,17 +3,20 @@
       <%== input_pesquisa(
           label: 'Natureza Jurídica',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:natureza_juridica, label: false),
+          url: natureza_juridica_index_path
       )%>
 
       <%== input_pesquisa(
           label: 'Regime de Pagamento',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:regime_pagamento, label: false),
+          url: regime_pagamento_index_path
       )%>
 
       <%== input_pesquisa(
           label: 'Atividade Econômica Principal',
-          size: 6,
-          input: f.input(nil, label: false),
+          size: 12,
+          input: f.input(:atividade_economica, label: false),
+          url: atividade_economica_index_path
       )%>

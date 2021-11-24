@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :bairro
   resources :natureza_juridica
   resources :regime_pagamento
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :atividade_economica
+  resources :contador
+  resources :socio
+  resources :cargo
+  resources :requerimentos
 end

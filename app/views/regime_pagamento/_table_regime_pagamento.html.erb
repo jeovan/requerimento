@@ -1,0 +1,36 @@
+<% recurso = 'regime_pagamento'%>
+
+ <table class="table table-bordered table-hover table-xxs col-md-12">
+    <thead>
+        <tr>
+            <th>CÓDIGO</th>
+            <th>DESCRIÇÃO</th>
+            
+            <th class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% (@regimes_pagamentos || []).each do |regime_pagamento| %>
+          <tr>
+
+            <td><%= regime_pagamento&.it_co_regime_pagamento%></td>
+            <td><%= regime_pagamento&.it_no_regime_pagamento%></td>
+            <td class="text-center">
+              <button href="#" 
+                  style="padding:10px 10px"
+                  data-input="<%= @input_id%>" 
+                  data-valor="<%= regime_pagamento&.it_co_regime_pagamento%> -<%= regime_pagamento&.it_no_regime_pagamento%>" 
+                  class="btn btn-success btn-raised legitRipple btn-<%= recurso%>">
+                  <i class=" icon-add"></i> 
+              </button>
+            </td>
+          </tr>
+        
+        <%end%>
+    </tbody>
+</table>
+
+
+<div class="row" style="margin-top: 20px" id="bloco_registros">
+    <div class='text-center'><%== pagy_bootstrap_nav(@pagy) %></div>
+</div>

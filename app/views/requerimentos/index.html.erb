@@ -8,7 +8,7 @@
 <%end%>
 
 
-<%= simple_form_for :requerimento do |f|%>
+<%= simple_form_for @requerimento do |f|%>
   <div class="row">
 
     <div class="tabbable col-md-12 tab-formulario">
@@ -54,12 +54,18 @@
     
     
   </div>
-
+  <%= f.submit%>
 <% end %>
 
 <div id="bloco_modal">
   <%= render 'requerimentos/modal', :tipo => 'logradouro' %>
   <%= render 'requerimentos/modal', :tipo => 'municipio' %>
   <%= render 'requerimentos/modal', :tipo => 'bairro' %>
+  <%= render 'requerimentos/modal', :tipo => 'natureza_juridica' %>
+  <%= render 'requerimentos/modal', :tipo => 'regime_pagamento' %>
+  <%= render 'requerimentos/modal', :tipo => 'atividade_economica' %>
+  <%= render 'requerimentos/modal', :tipo => 'contador' %>
+  <%= render 'requerimentos/modal', :tipo => 'socio' %>
+  <%= render 'requerimentos/modal', :tipo => 'cargo' %>
 
 </div>

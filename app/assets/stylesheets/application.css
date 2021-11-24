@@ -19,6 +19,11 @@
    color: blue
  } */
 
+ .invalid-feedback{
+   color: red;
+   font-size: 18px;
+ }
+
  .titulo{
   padding: 0 0 0 10px;
 

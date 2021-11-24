@@ -1,0 +1,12 @@
+<% recurso = 'atividade_economica' %>
+
+$('#table_<%= recurso%>').html(' <%= escape_javascript(render "#{recurso}/table_#{recurso}") %> ')
+$('#modal_<%= recurso%>').find('input[name="data-input"]').val('<%= @input_id%>')
+$('#modal_<%= recurso%>').modal('show');
+
+$(document).on('click', '.btn-<%= recurso%>',function(){
+  var id = `#${ $(this).attr('data-input') }`
+  var valor = `${ $(this).attr('data-valor') }`
+  $(id).val(valor)
+  $('#modal_<%= recurso%>').modal('hide')
+})

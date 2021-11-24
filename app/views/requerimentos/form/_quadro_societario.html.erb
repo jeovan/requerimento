@@ -1,7 +1,8 @@
 <%== subtitulo('QUADRO SOCIETÁRIO')%>
 
       <div class="col-md-12">
-          <%= f.input 'Sócio Responsável?', 
+          <%= f.input :socio_responsavel, 
+            label: 'Sócio Responsável?',
               as: :boolean
           %>
       </div>
@@ -9,22 +10,24 @@
       <%== input_pesquisa(
           label: 'Identificação',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:id_socio, label: false),
+          url: socio_index_path
       )%>
 
-      <%= f.input 'Nome/Razão Social', wrapper_html:{ class: 'col-md-6'}%>
-      <%= f.input :rg, wrapper_html:{ class: 'col-md-4'}%>
-      <%= f.input 'Orgão Expedidor', wrapper_html:{ class: 'col-md-2'}%>
+      <%= f.input :nome_socio, wrapper_html:{ class: 'col-md-6'}%>
+      <%#= f.input :rg, wrapper_html:{ class: 'col-md-4'}%>
+      <%#= f.input 'Orgão Expedidor', wrapper_html:{ class: 'col-md-2'}%>
 
       <%== input_pesquisa(
           label: 'Cargo',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:cargo_socio, label: false),
+          url: cargo_index_path
       )%>
 
       <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
       <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
-      <%= f.input :uf, wrapper_html:{ class: 'col-md-2'}%>
+      <%#= f.input :uf, wrapper_html:{ class: 'col-md-2'}%>
 
       <%== input_pesquisa(
           label: 'Municipio',
@@ -34,8 +37,8 @@
       )%>
 
 
-      <%= f.input :cep, wrapper_html:{ class: 'col-md-2'}%>
-      <%= f.input :telefone_1, wrapper_html:{ class: 'col-md-3'}%>
-      <%= f.input :telefone_2, wrapper_html:{ class: 'col-md-3'}%>
-      <%= f.input :email, wrapper_html:{ class: 'col-md-4'}%>
+      <%= f.input :cep_socio, wrapper_html:{ class: 'col-md-2'}%>
+      <%= f.input :telefone_1_socio, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :telefone_2_socio, wrapper_html:{ class: 'col-md-3'}%>
+      <%= f.input :email_socio, wrapper_html:{ class: 'col-md-4'}%>
       <%== subtitulo('CADASTRO DE SOCIOS')%>

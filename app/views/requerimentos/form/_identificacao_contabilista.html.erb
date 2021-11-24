@@ -3,11 +3,12 @@
       <%== input_pesquisa(
           label: 'Identificação',
           size: 6,
-          input: f.input(nil, label: false),
+          input: f.input(:contador, label: false, readonly: true),
+          url: contador_index_path
       )%>
 
-      <%= f.input :crc, wrapper_html:{ class: 'col-md-6'}%>
-      <%= f.input 'Razão Social', wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :crc, wrapper_html:{ class: 'col-md-6'},readonly: true%>
+      <%= f.input :nome_contador, wrapper_html:{ class: 'col-md-6'},readonly: true %>
       <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
 
       <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
