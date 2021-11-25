@@ -15,7 +15,4 @@ default: &default
 
 development:
   <<: *default
-  database: //exa01-scan.sefin.ro.gov.br:1521/desenv
-  username: sitafe
-  password: sitafe
 
