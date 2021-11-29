@@ -22,6 +22,12 @@
  .invalid-feedback{
    color: red;
    font-size: 18px;
+   
+ }
+
+ .input-group > div > .invalid-feedback{
+  position: absolute;
+  bottom: -65px;
  }
 
  .titulo{
