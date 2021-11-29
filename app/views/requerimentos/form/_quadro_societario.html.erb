@@ -1,5 +1,10 @@
-<%== subtitulo('QUADRO SOCIETÁRIO')%>
+<button type="button" 
+        style="background-color: #286fa5 !important;margin-bottom:3px;z-index:99" 
+        class='btn btn-primary btn-raised legitRipple pull-right btn-add-socio'>
+                    <i class='position-left  icon-add'></i>INCLUIR SÓCIO</button>
 
+<%== subtitulo('QUADRO SOCIETÁRIO')%>
+<div id ="bloco_socio">
       <div class="col-md-12">
           <%= f.input :socio_responsavel, 
             label: 'Sócio Responsável?',
@@ -10,7 +15,7 @@
       <%== input_pesquisa(
           label: 'Identificação',
           size: 6,
-          input: f.input(:id_socio, label: false),
+          input: f.input(:id_socio,id: 'socio_identificacao', label: false),
           url: socio_index_path
       )%>
 
@@ -25,8 +30,8 @@
           url: cargo_index_path
       )%>
 
-      <%= f.input :logradouro, wrapper_html:{ class: 'col-md-6'}%>
-      <%= f.input :bairro, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :logradouro_socio, wrapper_html:{ class: 'col-md-6'}%>
+      <%= f.input :bairro_socio, wrapper_html:{ class: 'col-md-6'}%>
       <%#= f.input :uf, wrapper_html:{ class: 'col-md-2'}%>
 
       <%== input_pesquisa(
@@ -41,4 +46,30 @@
       <%= f.input :telefone_1_socio, wrapper_html:{ class: 'col-md-3'}%>
       <%= f.input :telefone_2_socio, wrapper_html:{ class: 'col-md-3'}%>
       <%= f.input :email_socio, wrapper_html:{ class: 'col-md-4'}%>
+</div>
       <%== subtitulo('CADASTRO DE SOCIOS')%>
+
+    <div class="table-responsive" id="bloco_tbl_arquivos">
+        <table class="table table-xxs table-bordered table-hover table-striped datatable-html">
+          <thead>
+              <tr>
+                <th class="text-center col-md-10">NOME</th>
+                <th class="text-center"></th>
+              </tr>
+          </thead>
+          <tbody id="tb_socios">
+            
+            <tr>
+                <td>teste</td>
+                <td class="text-center">
+                    <button type="button" style="padding:10px 10px;" class="btn btn-danger btn-raised legitRipple btn-remove-socio">
+                      <i class=" icon-trash"></i>
+                    </button>
+                </td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+      
+

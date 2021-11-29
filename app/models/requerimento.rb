@@ -8,7 +8,7 @@ class Requerimento
   :email, :natureza_juridica, :regime_pagamento,:atividade_economica,
   :contador, :crc, :nome_contador, :logradouro , :bairro, :distrito, :municipio_contabilista,
   :cep_socio, :telefone_1_socio,:telefone_1, :telefone_2, :telefone_2_socio, :email_socio, :socio_responsavel,
-  :id_socio, :nome_socio,:cargo_socio,:municipio_socio
+  :id_socio, :nome_socio,:cargo_socio,:municipio_socio, :lista_socios, :logradouro_socio, :bairro_socio
 
 
   validates :tipo_servico, presence:{ message: ' : precisa ser selecionado'}
